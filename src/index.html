@@ -28,6 +28,72 @@
 		<meta name="theme-color" content="#ffffff" />
 	</head>
 	<body>
+		<header class="header">
+			<div class="header__wrapper wrapper">
+				<nav class="header__navigation navigation">
+					<a
+						class="navigation__item navigation__item--main"
+						aria-label="Главная страница"
+						><img
+							src="/img/logo.svg"
+							width="200"
+							height="55"
+							alt="Логотип FIX Ремонт"
+					/></a>
+					<a
+						class="navigation__item navigation__item--contacts"
+						href="javascript:void(0);"
+						>Контакты</a
+					>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<section class="greeting">
+				<div class="greeting__wrapper wrapper">
+					<h1 class="greeting__header">Ремонт квартир в типовых домах</h1>
+					<p class="greeting__promo">
+						Готовый дизайн-проект, работы и материалы за 3 месяца от 610 т.р.
+					</p>
+					<div class="greeting__info">
+						<a
+							class="greeting__link greeting__link--form button"
+							href="javascript:void(0);"
+							>Узнайте о запуске первым</a
+						>
+						<p class="greeting__plan">Старт весной 2016</p>
+					</div>
+					<div class="greeting__video video">
+						<a class="video__link" href="https://youtu.be/XqZsoesa55w">
+							<picture>
+								<source
+									type="image/webp"
+									srcset="
+										img/player-plug@2x.webp 2x,
+										img/player-plug@1x.webp 1x
+									"
+								/>
+								<img
+									class="video__media"
+									src="img/player-plug@1x.jpg"
+									srcset="img/player-plug@2x.jpg 2x"
+									width="940"
+									height="920"
+									alt="Примеры работ FIX Ремонт"
+								/>
+							</picture>
+						</a>
+						<button class="video__button" type="button">Смотреть видео</button>
+					</div>
+					<a
+						class="greeting__link greeting__link--scroll"
+						href="javascript:void(0);"
+						>Листайте вниз, чтобы ничего не упустить</a
+					>
+				</div>
+			</section>
+		</main>
+		<footer></footer>
 		<script src="js/script.min.js" type="module"></script>
 	</body>
 </html>
