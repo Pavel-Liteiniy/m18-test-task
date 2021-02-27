@@ -31,20 +31,25 @@
 		<header class="header">
 			<div class="header__wrapper wrapper">
 				<nav class="header__navigation navigation">
-					<a
-						class="navigation__item navigation__item--main"
-						aria-label="Главная страница"
-						><img
-							src="/img/logo.svg"
-							width="200"
-							height="55"
-							alt="Логотип FIX Ремонт"
-					/></a>
-					<a
-						class="navigation__item navigation__item--contacts"
-						href="javascript:void(0);"
-						>Контакты</a
-					>
+					<ul class="navigation__list">
+						<li class="navigation__item navigation__item--main">
+							<a aria-label="Главная страница"
+								><img
+									src="/img/logo.svg"
+									width="200"
+									height="55"
+									alt="Логотип FIX Ремонт"
+							/></a>
+						</li>
+						<li class="navigation__item navigation__item--contacts">
+							<a href="javascript:void(0);">
+								<svg width="25" height="26">
+									<use xlink:href="img/sprite.svg#icon-call"></use>
+								</svg>
+								Контакты</a
+							>
+						</li>
+					</ul>
 				</nav>
 			</div>
 		</header>
