@@ -1,5 +1,12 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: @family-muller;
+	.font_character(@base-font-size, @base-line-height, @normal-font-weight, @basic-black);
+
+	background-color: @basic-white;
 }

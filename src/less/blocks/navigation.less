@@ -1,0 +1,39 @@
+.navigation__list {
+	.list_default_remove();
+
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	flex-wrap: wrap;
+}
+
+.navigation__item {
+	.center-align-flex();
+
+	margin: 0 10px;
+
+	a {
+		.link_default_remove();
+		.font_character(@navigation-font-size, @navigation-line-height);
+		.center-align-flex();
+
+		padding: 10px 0;
+	}
+
+	&--main {
+		margin-right: auto;
+		margin-left: 0;
+
+		a {
+			padding: 0;
+		}
+	}
+
+	&--contacts svg {
+		margin-right: 8px;
+	}
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
