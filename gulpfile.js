@@ -13,8 +13,7 @@ const csso = require( 'gulp-csso' );
 const imagemin = require( 'gulp-imagemin' );
 const webp = require( 'gulp-webp' );
 const svgstore = require( 'gulp-svgstore' );
-const posthtml = require( 'gulp-posthtml' );
-const include = require( 'posthtml-include' );
+const htmlmin = require( 'gulp-htmlmin' );
 const del = require( 'del' );
 
 function sync() {
@@ -89,7 +88,7 @@ function sprite() {
 
 function html() {
 	return src( './src/*.html' )
-		.pipe( posthtml( [ include() ] ) )
+		.pipe( htmlmin( { collapseWhitespace: true, removeComments: true } ) )
 		.pipe( dest( './build/' ) );
 }
 
@@ -109,8 +108,8 @@ function copy() {
 	return src(
 		[
 			'./src/fonts/**/*.{woff,woff2}',
-			'./src/img/**',
-			'!./src/img/**/icon-*.svg'
+			'./src/img/*',
+			'!./src/img/icon'
 		],
 		{
 			base: './src/',
