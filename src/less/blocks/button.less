@@ -1,0 +1,36 @@
+.button {
+	display: block;
+
+	min-width: 250px;
+	padding: 18px 30px 15px;
+
+	text-align: center;
+
+	color: @basic_white;
+	background-color: @basic_orange;
+
+	border-radius: 25px;
+	box-shadow: @basic_box_shadow;
+
+	transition-duration: 200ms;
+
+	@media (min-width: @desktop_width) {
+		&:hover,
+		&:focus {
+			background-color: @light_orange;
+
+			box-shadow: @light_box_shadow;
+
+			transition-timing-function: linear;
+		}
+
+		&:active {
+			box-shadow: @basic_box_shadow;
+
+			transform: translateY(2px);
+
+			transition-duration: 200ms;
+			transition-timing-function: linear;
+		}
+	}
+}
