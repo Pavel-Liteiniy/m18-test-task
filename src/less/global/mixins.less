@@ -1,18 +1,34 @@
-.font_character(@size, @height, @weight, @color) {
+.font_character(@size, @height, @weight: @normal_font_weight, @color: @basic_black) {
 	font-size: @size;
-	line-height: @height;
 	font-weight: @weight;
+	line-height: @height;
+
 	color: @color;
 }
 
 .list_default_remove() {
-	list-style: none;
 	padding: 0;
 	margin: 0;
+
+	list-style: none;
 }
 
 .link_default_remove() {
 	text-decoration: none;
+
 	color: inherit;
+
 	outline: none;
+}
+
+.center_align_flex() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.stretch_align_flex() {
+	display: flex;
+	justify-content: stretch;
+	align-items: stretch;
 }
