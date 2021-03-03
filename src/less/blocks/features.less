@@ -1,0 +1,36 @@
+.features__tagline {
+	.font_character(@h2_font_size, @h2_line_height, @bold_font_weight);
+}
+
+.features__title {
+	letter-spacing: 0.62px;
+	text-transform: uppercase;
+
+	color: @basic_turquoise;
+}
+
+.features__heading {
+	.font_character(@h3_font_size, @h3_line_height, @bold_font_weight);
+}
+
+.features__description {
+	color: @basic_grey;
+}
+
+.features__list {
+	.list_default_remove();
+}
+
+.features__item {
+	border-top: @basic_border;
+
+	&--extra {
+		border: @basic_border;
+
+		.features__description {
+			letter-spacing: -0.5px;
+
+			.font_character(@large_font_size, @large_line_height, @bold_font_weight, @basic_black);
+		}
+	}
+}
