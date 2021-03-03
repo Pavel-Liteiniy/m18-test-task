@@ -27,6 +27,7 @@
 		<meta name="msapplication-TileColor" content="#ffffff" />
 		<meta name="theme-color" content="#ffffff" />
 	</head>
+
 	<body>
 		<header class="header">
 			<div class="header__wrapper wrapper">
@@ -42,11 +43,11 @@
 							/></a>
 						</li>
 						<li class="navigation__item navigation__item--contacts">
-							<a href="javascript:void(0);">
-								<svg width="25" height="26">
+							<a href="javascript:void(0);" aria-label="Контакты">
+								<svg focusable="false" width="25" height="26">
 									<use xlink:href="img/sprite.svg#icon-call"></use>
 								</svg>
-								Контакты</a
+								<span>Контакты</span></a
 							>
 						</li>
 					</ul>
@@ -56,20 +57,28 @@
 		<main>
 			<section class="greeting">
 				<div class="greeting__wrapper wrapper">
-					<h1 class="greeting__header">Ремонт квартир в типовых домах</h1>
-					<p class="greeting__promo">
-						Готовый дизайн-проект, работы и материалы за 3 месяца от 610 т.р.
-					</p>
-					<div class="greeting__info">
-						<a
-							class="greeting__link greeting__link--form button"
-							href="javascript:void(0);"
-							>Узнайте о запуске первым</a
-						>
-						<p class="greeting__plan">Старт весной 2016</p>
+					<div class="greeting__preview">
+						<h1 class="greeting__header">Ремонт квартир в типовых домах</h1>
+						<p class="greeting__promo">
+							Готовый дизайн-проект, работы и материалы за&nbsp;3&nbsp;месяца
+							от&nbsp;610&nbsp;т.р.
+						</p>
+						<div class="greeting__info">
+							<a
+								class="greeting__link greeting__link--form button"
+								href="javascript:void(0);"
+								>Узнайте о запуске первым</a
+							>
+							<p class="greeting__plan">Старт весной 2016</p>
+						</div>
 					</div>
 					<div class="greeting__video video">
-						<a class="video__link" href="https://youtu.be/XqZsoesa55w">
+						<a
+							class="video__link"
+							target="_blank"
+							rel="noopener noreferrer"
+							href="https://youtu.be/XqZsoesa55w"
+						>
 							<picture>
 								<source
 									type="image/webp"
@@ -93,7 +102,7 @@
 					<a
 						class="greeting__link greeting__link--scroll"
 						href="javascript:void(0);"
-						>Листайте вниз, чтобы ничего не упустить</a
+						>Листайте вниз,<br />чтобы ничего не упустить</a
 					>
 				</div>
 			</section>
@@ -101,4 +110,5 @@
 		<footer></footer>
 		<script src="js/script.min.js" type="module"></script>
 	</body>
+
 </html>
