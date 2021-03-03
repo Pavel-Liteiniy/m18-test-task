@@ -6,11 +6,10 @@ function findVideos() {
 
 function setupVideo( video ) {
 	let link = video.querySelector( '.video__link' );
-	let media = video.querySelector( '.video__media' );
 	let button = video.querySelector( '.video__button' );
 	let id = parseURL( link );
 
-	video.addEventListener( 'click', () => {
+	button.addEventListener( 'click', () => {
 		let iframe = createIframe( id );
 
 		link.remove();
@@ -22,9 +21,9 @@ function setupVideo( video ) {
 	video.classList.add( 'video--enabled' );
 }
 
-function parseURL( media ) {
+function parseURL( link ) {
 	let regexp = /https:\/\/youtu\.be\/([a-zA-Z0-9_-]+)\/*/i;
-	let url = media.href;
+	let url = link.href;
 	let match = url.match( regexp );
 
 	return match[ 1 ];
