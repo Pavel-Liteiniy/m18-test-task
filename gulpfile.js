@@ -40,6 +40,7 @@ function js() {
 		.pipe(
 			babel( {
 				presets: [ '@babel/env' ],
+				plugins: [ '@babel/plugin-proposal-class-properties' ]
 			} )
 		)
 		.pipe( uglify() )
