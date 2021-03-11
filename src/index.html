@@ -153,6 +153,60 @@
 					</div>
 				</div>
 			</section>
+			<section class="subscribe">
+				<div class="subscribe__wrapper wrapper">
+					<h2 class="visually-hidden">Оформление подписки на новости</h2>
+					<p class="subscribe__tagline">Узнайте о запуске сервиса первым</p>
+					<div class="subscribe__inner">
+						<p class="subscribe__title">
+							Первым 10 клиентам стальная входная дверь в подарок
+						</p>
+						<form
+							class="subscribe__form"
+							method="get"
+							action="https://echo.htmlacademy.ru"
+						>
+							<input
+								class="subscribe__input subscribe__input--name"
+								type="text"
+								name="name"
+								id="subscribe-name"
+								required
+								placeholder="Имя и фамилия*"
+								pattern="^[-a-zA-Zа-яёА-ЯЁ\s]+$"
+							/>
+							<input
+								class="subscribe__input subscribe__input--email"
+								type="text"
+								name="email"
+								id="subscribe-email"
+								required
+								placeholder="Е-mail адрес*"
+								pattern="^(?:[-a-z\d\+\*\/\?!{}`~_%&'=^$#]+(?:\.[-a-z\d\+\*\/\?!{}`~_%&'=^$#]+)*)@(?:[-a-z\d_]+\.){1,60}[a-z]{2,6}$"
+							/>
+							<input
+								class="subscribe__input subscribe__input--phone"
+								type="text"
+								name="phone"
+								id="subscribe-phone"
+								placeholder="Телефон"
+								pattern="^[-\+\(\)\d\s]+$"
+							/>
+							<button class="subscribe__button button" type="submit">
+								Подписаться
+							</button>
+						</form>
+						<p class="subscribe__hint">* Обязательные для заполнения поля</p>
+						<a
+							class="subscribe__privacy"
+							target="_blank"
+							rel="noopener noreferrer"
+							href="http://papertoilet.com/"
+							>Политика конфиденциальности</a
+						>
+					</div>
+				</div>
+			</section>
 		</main>
 		<footer></footer>
 		<script src="js/script.min.js" type="module"></script>
