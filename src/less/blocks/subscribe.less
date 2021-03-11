@@ -1,0 +1,126 @@
+.subscribe {
+	padding: 20px 40px;
+
+	@media (max-width: @tablet_width - 1) {
+		padding: 10px 0;
+	}
+}
+
+.subscribe__wrapper {
+	max-width: 984px;
+	padding: 50px 50px 55px;
+	margin-top: 30px;
+
+	border: @basic_border;
+
+	@media (max-width: @tablet_width - 1) {
+		padding: 20px 10px 10px;
+		margin-top: 20px;
+	}
+}
+
+.subscribe__tagline {
+	.font_character(@h2_font_size, @h2_line_height, @bold_font_weight);
+
+	width: 80%;
+	min-width: 260px;
+	padding: 0 20px;
+	margin: -76px auto 30px;
+
+	letter-spacing: -0.2px;
+	text-align: center;
+
+	background-color: @basic_white;
+
+	@media (max-width: @tablet_width - 1) {
+		margin: -38px auto 10px;
+
+		font-size: @h2_mobile_font_size;
+		line-height: @h2_mobile_line_height;
+	}
+}
+
+.subscribe__inner {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
+
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.subscribe__title {
+	padding: 21px 40px 59px 128px;
+	margin: 0;
+
+	letter-spacing: 0.6px;
+	text-transform: uppercase;
+
+	background-image: url("../img/door.svg");
+	background-position: 67px calc(50% - 21px);
+	background-repeat: no-repeat;
+
+	@media (max-width: @tablet_width - 1) {
+		padding: 10px 10px 20px 128px;
+	}
+}
+
+.subscribe__form {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
+}
+
+.subscribe__input {
+	.font_character(@form_font_size, @form_line_height);
+
+	padding: 19px 24px 15px;
+	margin-bottom: 30px;
+
+	border: @form_border;
+	border-radius: 4px;
+
+	@media (max-width: @tablet_width - 1) {
+		padding: 10px 15px 10px;
+		margin-bottom: 20px;
+	}
+
+	&:last-of-type {
+		margin-bottom: 48px;
+
+		@media (max-width: @tablet_width - 1) {
+			margin-bottom: 30px;
+		}
+	}
+
+	&::placeholder {
+		color: @basic_grey;
+	}
+}
+
+.subscribe__button {
+	align-self: center;
+
+	margin-bottom: 22px;
+
+	@media (max-width: @tablet_width - 1) {
+		margin-bottom: 10px;
+	}
+}
+
+.subscribe__hint {
+	.font_character(@note_font_size, @note_line_height, @normal_font_weight, @basic_grey);
+
+	align-self: center;
+
+	margin: 0;
+}
+
+.subscribe__privacy {
+	.font_character(@note_font_size, @note_line_height, @normal_font_weight, @basic_orange);
+	.link_default_remove();
+
+	align-self: center;
+}
