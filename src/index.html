@@ -163,35 +163,49 @@
 						</p>
 						<form
 							class="subscribe__form"
-							method="get"
+							method="post"
 							action="https://echo.htmlacademy.ru"
+							autocomplete="off"
 						>
-							<input
-								class="subscribe__input subscribe__input--name"
-								type="text"
-								name="name"
-								id="subscribe-name"
-								required
-								placeholder="Имя и фамилия*"
-								pattern="^[-a-zA-Zа-яёА-ЯЁ\s]+$"
-							/>
-							<input
-								class="subscribe__input subscribe__input--email"
-								type="text"
-								name="email"
-								id="subscribe-email"
-								required
-								placeholder="Е-mail адрес*"
-								pattern="^(?:[-a-z\d\+\*\/\?!{}`~_%&'=^$#]+(?:\.[-a-z\d\+\*\/\?!{}`~_%&'=^$#]+)*)@(?:[-a-z\d_]+\.){1,60}[a-z]{2,6}$"
-							/>
-							<input
-								class="subscribe__input subscribe__input--phone"
-								type="text"
-								name="phone"
-								id="subscribe-phone"
-								placeholder="Телефон"
-								pattern="^[-\+\(\)\d\s]+$"
-							/>
+							<div class="subscribe__group">
+								<input
+									class="subscribe__input subscribe__input--name"
+									type="text"
+									name="name"
+									id="subscribe-name"
+									placeholder=" "
+									required
+									pattern="^[-a-zA-Zа-яёА-ЯЁ\s]+$"
+								/>
+								<label class="subscribe__label" for="subscribe-name"
+									>Имя и фамилия*</label
+								>
+							</div>
+
+							<div class="subscribe__group">
+								<input
+									class="subscribe__input subscribe__input--email"
+									type="text"
+									name="email"
+									id="subscribe-email"
+									placeholder=" "
+									required
+									pattern="^(?:[-a-z\d\+\*\/\?!{}`~_%&'=^$#]+(?:\.[-a-z\d\+\*\/\?!{}`~_%&'=^$#]+)*)@(?:[-a-z\d_]+\.){1,60}[a-z]{2,6}$"
+								/>
+								<label class="subscribe__label" for="subscribe-email"
+									>Е-mail адрес*</label
+								>
+							</div>
+							<div class="subscribe__group">
+								<input
+									class="subscribe__input subscribe__input--phone"
+									type="text"
+									name="phone"
+									id="subscribe-phone"
+									placeholder=" "
+								/>
+								<label class="subscribe__label" for="">Телефон</label>
+							</div>
 							<button class="subscribe__button button" type="submit">
 								Подписаться
 							</button>
