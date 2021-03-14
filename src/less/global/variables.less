@@ -7,10 +7,13 @@
 @light_grey: #ccc;
 @basic_orange: #f9572e;
 @light_orange: #ff7b59;
+@error_tomato: #b61500;
 @basic_turquoise: #33b5a3;
 @dark_turquoise: #63d2c1;
 @basic_box_shadow: 0 7px 15px rgba(249, 87, 46, 0.6);
 @light_box_shadow: 0 15px 20px rgba(249, 87, 46, 0.7);
+@error_box_shadow: 0 0 5px 1px @error_tomato;
+@warning_box_shadow: 0 0 5px 1px @basic_orange;
 
 // Viewports
 @max_width: 1880px;
@@ -28,16 +31,22 @@
 @h1_mobile_line_height: 32px;
 @h2_font_size: 40px;
 @h2_line_height: 50px;
+@h2_mobile_font_size: 25px;
+@h2_mobile_line_height: 28px;
 @h3_font_size: 24px;
 @h3_line_height: 32px;
 @base_font_size: 16px;
 @base_line_height: 24px;
 @large_font_size: 64px;
 @large_line_height: 60px;
+@large_mobile_font_size: 40px;
+@large_mobile_line_height: 46px;
 @button_font_size: 16px;
 @button_line_height: 18px;
 @form_font_size: 18px;
 @form_line_height: 24px;
+@placeholder_font_size: 13px;
+@placeholder_line_height: 24px;
 @navigation_font_size: 21px;
 @navigation_line_height: 25px;
 @social_font_size: 21px;
@@ -56,6 +65,7 @@
 @basic_border: 4px solid @dark_turquoise;
 @form_border: 1px solid @light_grey;
 @arrow_border: 2px solid @basic_orange;
+@error_border: 1px solid @error_tomato;
 
 // Header
 @header_desktop_min_height: 100px;

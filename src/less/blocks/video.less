@@ -8,10 +8,10 @@
 }
 
 .video__link {
+	.center_align_flex();
+
 	width: 100%;
 	height: 100%;
-
-	.center_align_flex();
 
 	picture {
 		margin-bottom: -8px;
@@ -30,6 +30,8 @@
 }
 
 .video__button {
+	.font_character(@medium_font_size, @medium_line_height, @normal_font_weight, @basic_orange);
+
 	position: absolute;
 	top: 46.5%;
 	left: 50%;
@@ -47,8 +49,6 @@
 	transform: translate(-50%, -50%);
 
 	transition-duration: 500ms;
-
-	.font_character(@medium_font_size, @medium_line_height, @normal_font_weight, @basic_orange);
 
 	@media (min-width: @desktop_width) {
 		&:hover,

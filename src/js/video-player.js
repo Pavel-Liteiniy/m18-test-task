@@ -1,15 +1,15 @@
 function findVideos() {
-	let videos = document.querySelectorAll( '.video' );
+	let videos = document.querySelectorAll( `.video` );
 
 	videos.forEach( ( video ) => setupVideo( video ) );
 }
 
 function setupVideo( video ) {
-	let link = video.querySelector( '.video__link' );
-	let button = video.querySelector( '.video__button' );
+	let link = video.querySelector( `.video__link` );
+	let button = video.querySelector( `.video__button` );
 	let id = parseURL( link );
 
-	button.addEventListener( 'click', () => {
+	button.addEventListener( `click`, () => {
 		let iframe = createIframe( id );
 
 		link.remove();
@@ -17,8 +17,8 @@ function setupVideo( video ) {
 		video.appendChild( iframe );
 	} );
 
-	link.removeAttribute( 'href' );
-	video.classList.add( 'video--enabled' );
+	link.removeAttribute( `href` );
+	video.classList.add( `video--enabled` );
 }
 
 function parseURL( link ) {
@@ -30,20 +30,20 @@ function parseURL( link ) {
 }
 
 function createIframe( id ) {
-	let iframe = document.createElement( 'iframe' );
+	let iframe = document.createElement( `iframe` );
 
-	iframe.setAttribute( 'allowfullscreen', '' );
-	iframe.setAttribute( 'allow', 'autoplay' );
-	iframe.setAttribute( 'src', generateURL( id ) );
-	iframe.classList.add( 'video__media' );
+	iframe.setAttribute( `allowfullscreen`, `` );
+	iframe.setAttribute( `allow`, `autoplay` );
+	iframe.setAttribute( `src`, generateURL( id ) );
+	iframe.classList.add( `video__media` );
 
 	return iframe;
 }
 
 function generateURL( id ) {
-	let query = '?rel=0&showinfo=0&autoplay=1';
+	let query = `?rel=0&showinfo=0&autoplay=1`;
 
-	return 'https://www.youtube.com/embed/' + id + query;
+	return `https://www.youtube.com/embed/` + id + query;
 }
 
 findVideos();
