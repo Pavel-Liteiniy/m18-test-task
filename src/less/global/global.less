@@ -4,10 +4,14 @@
 	box-sizing: border-box;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
+	.font_character(@base_font_size, @base_line_height, @normal_font_weight, @basic_black);
+
 	font-family: @family_muller;
 
 	background-color: @basic_white;
-
-	.font_character(@base_font_size, @base_line_height, @normal_font_weight, @basic_black);
 }
