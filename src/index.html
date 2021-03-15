@@ -27,8 +27,8 @@
 		<meta name="msapplication-TileColor" content="#ffffff" />
 		<meta name="theme-color" content="#ffffff" />
 	</head>
-
 	<body>
+
 		<header class="header">
 			<div class="header__wrapper wrapper">
 				<nav class="header__navigation navigation">
@@ -43,7 +43,7 @@
 							/></a>
 						</li>
 						<li class="navigation__item navigation__item--contacts">
-							<a href="javascript:void(0);" aria-label="Контакты">
+							<a href="#socials" aria-label="Контакты" data-scroll>
 								<svg focusable="false" width="25" height="26">
 									<use xlink:href="img/sprite.svg#icon-call"></use>
 								</svg>
@@ -66,7 +66,8 @@
 						<div class="greeting__info">
 							<a
 								class="greeting__link greeting__link--form button"
-								href="javascript:void(0);"
+								href="#subscribe"
+								data-scroll
 								>Узнайте о запуске первым</a
 							>
 							<p class="greeting__plan">Старт весной 2016</p>
@@ -101,12 +102,13 @@
 					</div>
 					<a
 						class="greeting__link greeting__link--scroll"
-						href="javascript:void(0);"
+						href="#features"
+						data-scroll
 						>Листайте вниз,<br />чтобы ничего не упустить</a
 					>
 				</div>
 			</section>
-			<section class="features">
+			<section class="features" id="features">
 				<div class="features__wrapper wrapper">
 					<h2 class="visually-hidden">Преимущества FIX Ремонт</h2>
 					<div class="features__intro">
@@ -153,7 +155,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="subscribe">
+			<section class="subscribe" id="subscribe">
 				<div class="subscribe__wrapper wrapper">
 					<h2 class="visually-hidden">Оформление подписки на новости</h2>
 					<p class="subscribe__tagline">Узнайте о запуске сервиса первым</p>
@@ -204,7 +206,9 @@
 									id="subscribe-phone"
 									placeholder=" "
 								/>
-								<label class="subscribe__label" for="subscribe-phone">Телефон</label>
+								<label class="subscribe__label" for="subscribe-phone"
+									>Телефон</label
+								>
 							</div>
 							<button class="subscribe__button button" type="submit">
 								Подписаться
@@ -222,7 +226,99 @@
 				</div>
 			</section>
 		</main>
-		<footer></footer>
+		<footer class="footer">
+			<div class="footer__wrapper wrapper">
+				<section class="footer__socials socials" id="socials">
+					<h2 class="visually-hidden">Контактная информация</h2>
+					<ul class="socials__list socials__list--networks">
+						<li class="socials__item">
+							<a
+								class="socials__icon"
+								target="_blank"
+								rel="noopener noreferrer"
+								href="https://www.facebook.com/"
+								aria-label="Страница FIX Ремонт в Фейсбук"
+								title="Страница FIX Ремонт в Фейсбук"
+							>
+								<svg focusable="false" width="13" height="23">
+									<use xlink:href="img/sprite.svg#icon-facebook"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="socials__item">
+							<a
+								class="socials__icon"
+								target="_blank"
+								rel="noopener noreferrer"
+								href="https://vk.com/"
+								aria-label="Страница FIX Ремонт во Вконтакте"
+								title="Страница FIX Ремонт во Вконтакте"
+							>
+								<svg focusable="false" width="29" height="18">
+									<use xlink:href="img/sprite.svg#icon-vkontakte"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="socials__item">
+							<a
+								class="socials__icon"
+								target="_blank"
+								rel="noopener noreferrer"
+								href="https://www.instagram.com/"
+								aria-label="Страница FIX Ремонт в Инстаграм"
+								title="Страница FIX Ремонт в Инстаграм"
+							>
+								<svg focusable="false" width="24" height="23">
+									<use xlink:href="img/sprite.svg#icon-instagram"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+					<p class="socials__tagline">Следите за нашим развитием</p>
+					<p class="socials__description">
+						Подпишитесь на наши аккаунты в соц.&nbsp;сетях, знакомьтесь с нашими
+						проектами и тем, что нас вдохновляет
+					</p>
+					<ul class="socials__list socials__list--contacts">
+						<li class="socials__item">
+							<a
+								class="socials__contact socials__contact--phone"
+								href="tel:+78129035445"
+							>
+								<svg focusable="false" width="25" height="26">
+									<use xlink:href="img/sprite.svg#icon-call"></use>
+								</svg>
+								+7 (812) 903-54-45
+							</a>
+						</li>
+						<li class="socials__item">
+							<a
+								class="socials__contact socials__contact--address"
+								target="_blank"
+								rel="noopener noreferrer"
+								href="https://goo.gl/maps/FP8um9K7kPCuP4EZ9"
+							>
+								<span>Ул. Галерная, д 55,</span>
+								<span class="socials__city-name">Санкт-Петербург</span>
+							</a>
+						</li>
+						<li class="socials__item">
+							<a
+								class="socials__contact socials__contact--email"
+								href="mailto:9035445@gmail.com"
+							>
+								<svg focusable="false" width="32" height="22">
+									<use xlink:href="img/sprite.svg#icon-post"></use>
+								</svg>
+								<span>9035445@gmail.com</span>
+							</a>
+						</li>
+					</ul>
+				</section>
+				<p class="footer__copyright">© FIX Ремонт, 2016</p>
+			</div>
+		</footer>
 		<script src="js/script.min.js" type="module"></script>
+
 	</body>
 </html>
