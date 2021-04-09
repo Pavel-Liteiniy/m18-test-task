@@ -8,7 +8,7 @@
 		"eslint": "eslint \"src/js/**/*.js\"",
 		"stylelint": "stylelint \"src/less/**/*.less\"",
 		"test": "npm run stylelint && npm run eslint",
-		"build": "npx gulp build",
+		"build": "npx gulp docs",
 		"start": "npx gulp start"
 	},
 	"author": "Pavel-Liteiniy",
