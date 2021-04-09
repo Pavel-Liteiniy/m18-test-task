@@ -19,7 +19,7 @@ const del = require( 'del' );
 function sync() {
 	browserSync.init( {
 		server: {
-			baseDir: './build/',
+			baseDir: './docs/',
 		},
 		notify: false,
 		online: true,
@@ -46,7 +46,7 @@ function js() {
 		.pipe( uglify() )
 		.pipe( concat( 'script.min.js' ) )
 		.pipe( sourcemaps.write( '.' ) )
-		.pipe( dest( './build/js/' ) );
+		.pipe( dest( './docs/js/' ) );
 }
 
 function les() {
@@ -58,7 +58,7 @@ function les() {
 		.pipe( csso() )
 		.pipe( rename( 'style.min.css' ) )
 		.pipe( sourcemaps.write( '.' ) )
-		.pipe( dest( './build/css' ) )
+		.pipe( dest( './docs/css' ) )
 		.pipe( browserSync.stream() );
 }
 
@@ -71,7 +71,7 @@ function css() {
 				suffix: '.min',
 			} )
 		)
-		.pipe( dest( './build/css/vendor' ) );
+		.pipe( dest( './docs/css/vendor' ) );
 }
 
 function convertWebp() {
@@ -84,13 +84,13 @@ function sprite() {
 	return src( './src/img/**/icon-*.svg' )
 		.pipe( svgstore( { inlineSvg: true } ) )
 		.pipe( rename( 'sprite.svg' ) )
-		.pipe( dest( './build/img' ) );
+		.pipe( dest( './docs/img' ) );
 }
 
 function html() {
 	return src( './src/*.html' )
 		.pipe( htmlmin( { collapseWhitespace: true, removeComments: true } ) )
-		.pipe( dest( './build/' ) );
+		.pipe( dest( './docs/' ) );
 }
 
 function img() {
@@ -116,22 +116,22 @@ function copy() {
 			base: './src/',
 		},
 	)
-		.pipe( dest( './build/' ) )
+		.pipe( dest( './docs/' ) )
 		.pipe( src(
 			'./*.{png,ico,svg,xml,webmanifest}',
 			{
 				base: './'
 			}
 		) )
-		.pipe( dest( './build/' ) );
+		.pipe( dest( './docs/' ) );
 }
 
 function clear() {
-	return del( './build' );
+	return del( './docs' );
 }
 
-exports.build = series(
+exports.docs = series(
 	parallel( clear, convertWebp, img ),
 	parallel( sprite, html, copy, les, js, css )
 );
-exports.start = series( exports.build, sync );
+exports.start = series( exports.docs, sync );
