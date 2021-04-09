@@ -2,8 +2,8 @@ const data = [
 	{
 		description: `Оранжерея в&nbsp;стиле джунглей для&nbsp;любителей цветочков`,
 		src: {
-			x1: `/img/slider-1@1x.jpg`,
-			x2: `/img/slider-1@2x.jpg`
+			x1: `./img/slider-1@1x.jpg`,
+			x2: `./img/slider-1@2x.jpg`
 		},
 		size: {
 			width: 750,
@@ -13,8 +13,8 @@ const data = [
 	{
 		description: `Кафельная плитка в&nbsp;ванной комнате в&nbsp;скандинавском стиле`,
 		src: {
-			x1: `/img/slider-2@1x.jpg`,
-			x2: `/img/slider-2@2x.jpg`
+			x1: `./img/slider-2@1x.jpg`,
+			x2: `./img/slider-2@2x.jpg`
 		},
 		size: {
 			width: 750,
@@ -24,8 +24,8 @@ const data = [
 	{
 		description: `Рай воплоти для&nbsp;любителей Икеи и бирюзовых тонов`,
 		src: {
-			x1: `/img/slider-3@1x.jpg`,
-			x2: `/img/slider-3@2x.jpg`
+			x1: `./img/slider-3@1x.jpg`,
+			x2: `./img/slider-3@2x.jpg`
 		},
 		size: {
 			width: 750,
